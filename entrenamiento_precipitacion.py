@@ -19,7 +19,7 @@ temperaturas = df['Precipitacion'].astype(float)
 serie = pd.Series(temperaturas.values, index=fechas)
 
 # 4. División en entrenamiento y prueba (85%)
-train_size = int(len(serie) * 0.45)
+train_size = int(len(serie) * 0.8)
 train, test = serie[:train_size], serie[train_size:]
 
 # 5. Entrenar modelo SARIMA (puedes ajustar los parámetros si deseas)
